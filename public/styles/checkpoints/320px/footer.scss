@@ -1,0 +1,22 @@
+@use '../../shared/mixins/flex' as flex_mixins;
+@use '../../shared/extends/flex';
+
+@media screen and (width: 320px) {
+    footer {
+        border-top: 1px solid rgb(241, 241, 241);
+        @include flex_mixins.center_j_d(center);
+    }
+    .aside_styled_link {
+        font-size: 10px;
+        color: rgb(137, 137, 137);
+        @include flex_mixins.center_j_d(center, column);
+    }
+    .aside_styled_link:first-child {
+        color: red;
+    }
+    #footer_icons {
+        width: 265px;
+        height: 70px;
+        @include flex_mixins.center_j_d(space-between);
+    }
+}

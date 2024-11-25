@@ -1,0 +1,40 @@
+@use '../../shared/mixins/flex' as flex_mixins;
+@use '../../shared/extends/flex';
+
+@media screen and (width: 320px) {
+    header {
+        padding: 10px 16px 10px 16px;
+        @include flex_mixins.center_j_d(space-between);
+    }
+    #header_firstPart {
+        &_menu {
+            display: none;
+        }
+        &_appLogo {
+            width: 116px;
+        }
+    }
+    #header_secondPart {
+        width: 73px;
+        @include flex_mixins.center_j_d(space-between);
+        &_wrapper {
+            &_otherLogos {
+                display: none;
+
+                img {
+                }
+            }
+            &_userIcon {
+                width: 30px;
+            }
+        }
+    }
+    #search_container {
+        &_field {
+            display: none;
+        }
+        &_logo {
+            width: 19px;
+        }
+    }
+}

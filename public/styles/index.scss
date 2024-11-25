@@ -1,0 +1,20 @@
+@use 'shared/mixins/flex' as flex_mixins;
+:root {
+    --font_26: 26px;
+    --font_18: 18px;
+    --font_16: 16px;
+    --font_13: 13px;
+}
+
+html {
+    width: 100vw;
+    font-family: 'Mulish', sans-serif;
+}
+body {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    @include flex_mixins.center_j_d(initial, column);
+}
+body > * {
+    width: 100%;
+}

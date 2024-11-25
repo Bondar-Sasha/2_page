@@ -1,0 +1,110 @@
+@use '../../shared/mixins/flex' as flex_mixins;
+@use '../../shared/extends/flex';
+
+@media screen and (min-width: 1440px) {
+    // header {
+    //     padding: 10px 16px 10px 16px;
+    //     @include flex_mixins.center_j_d(space-between);
+    // }
+    // #header_firstPart {
+    //     width: clamp(150px, 15%, 500px);
+    //     min-width: 160px;
+    //     @include flex_mixins.center_j_d(space-between);
+
+    //     &_menu {
+    //         width: clamp(30px, 1vw, 35px);
+    //     }
+    //     &_appLogo {
+    //         width: clamp(160px, 1vw, 220px);
+    //     }
+    // }
+    // #header_secondPart {
+    //     width: 80%;
+
+    //     @include flex_mixins.center_j_d(space-between);
+    //     &_wrapper {
+    //         width: 30%;
+    //         @include flex_mixins.center_j_d(space-between);
+    //         &_otherLogos {
+    //             width: 55%;
+    //             @include flex_mixins.center_j_d(space-between);
+    //             img {
+    //             }
+    //         }
+    //         &_userIcon {
+    //         }
+    //     }
+    // }
+    // #search_container {
+    //     position: relative;
+    //     width: 100%;
+    //     @include flex_mixins.center_j_d(initial);
+
+    //     &_field {
+    //         width: inherit;
+    //         height: inherit;
+    //         max-height: 60px;
+    //         padding: 12px 0 12px 23px;
+    //         font-size: var(--font_16);
+    //         border-radius: clamp(22px, 50%, 30px);
+    //         background: rgb(235, 235, 235);
+    //         opacity: 0.3;
+    //     }
+    //     &_logo {
+    //         position: absolute;
+    //         right: 13%;
+    //         width: 18.21px;
+    //     }
+    // }
+    header {
+        padding: 20px 70px 20px 31.86px;
+        @include flex_mixins.center_j_d(space-between);
+    }
+    #header_firstPart {
+        width: 12%;
+        @include flex_mixins.center_j_d(space-between);
+        &_menu {
+            width: clamp(20px, 4vw, 30px);
+        }
+        &_appLogo {
+            width: clamp(116px, 4vw, 150px);
+        }
+    }
+    #header_secondPart {
+        width: 82%;
+        @include flex_mixins.center_j_d(space-between);
+        &_wrapper {
+            width: 31%;
+            @include flex_mixins.center_j_d(space-between);
+            &_otherLogos {
+                width: 50%;
+                @include flex_mixins.center_j_d(space-between);
+                img {
+                }
+            }
+            &_userIcon {
+                width: clamp(40px, 4vw, 50px);
+            }
+        }
+    }
+    #search_container {
+        position: relative;
+        width: 55%;
+        @include flex_mixins.center_j_d(initial);
+
+        &_field {
+            width: 100%;
+            height: inherit;
+            padding: 12px 0 12px 23px;
+            font-size: var(--font_16);
+            border-radius: 22px;
+            background: rgb(235, 235, 235);
+            opacity: 0.3;
+        }
+        &_logo {
+            position: absolute;
+            right: 18px;
+            width: 18.21px;
+        }
+    }
+}

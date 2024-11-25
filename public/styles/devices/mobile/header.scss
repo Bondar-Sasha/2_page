@@ -1,0 +1,75 @@
+@use '../../shared/mixins/flex' as flex_mixins;
+@use '../../shared/extends/flex';
+
+@media screen and (max-width: 767px) {
+    header {
+        padding: 10px 16px 10px 16px;
+        @include flex_mixins.center_j_d(space-between);
+    }
+    #header_firstPart {
+        @include flex_mixins.center_j_d(center);
+
+        &_menu {
+            display: none;
+        }
+        &_appLogo {
+            width: clamp(100px, 20vw, 140px);
+        }
+    }
+    #header_secondPart {
+        width: clamp(60px, 30vw, 150px);
+        @include flex_mixins.center_j_d(space-between);
+        &_wrapper {
+            &_otherLogos {
+                display: none;
+                img {
+                }
+            }
+            &_userIcon {
+                width: clamp(15px, 15vw, 50px);
+            }
+        }
+    }
+    #search_container {
+        @include flex_mixins.center_j_d(center);
+
+        &_field {
+            display: none;
+        }
+        &_logo {
+            width: clamp(10px, 8vw, 20px);
+        }
+    }
+}
+@media screen and (max-width: 200px) {
+    header {
+    }
+    #header_firstPart {
+        width: 100%;
+        @include flex_mixins.center_j_d(space-between);
+
+        &_menu {
+            display: initial;
+        }
+        &_appLogo {
+        }
+    }
+    #header_secondPart {
+        display: none;
+
+        &_wrapper {
+            &_otherLogos {
+                img {
+                }
+            }
+            &_userIcon {
+            }
+        }
+    }
+    #search_container {
+        &_field {
+        }
+        &_logo {
+        }
+    }
+}

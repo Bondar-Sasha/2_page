@@ -1,0 +1,123 @@
+@use '../../../shared/mixins/flex' as flex_mixins;
+@use '../../../shared/extends/flex';
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    main {
+        @include flex_mixins.center_j_d(center);
+        padding: 10px 20px;
+        align-items: center;
+    }
+    #main_content {
+        // display: flex;
+        // flex-direction: column;
+        flex-grow: 1;
+        &_authorContent {
+            display: flex;
+            flex-direction: column;
+        }
+        &_recommended {
+            display: flex;
+            flex-direction: column;
+            margin-top: 47px;
+        }
+        &_other {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+    }
+    .section_infHeader {
+        width: 90%;
+        margin-bottom: 30px;
+        color: rgb(25, 32, 44);
+
+        font-size: var(--font_26);
+        font-weight: 700;
+        @include flex_mixins.center_j_d(space-between);
+    }
+    .section_inf {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // width: 50px;
+        &_authorLogo {
+        }
+        &_authorName {
+            margin-left: 20px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        &_author_infForUser {
+            color: rgb(194, 194, 194);
+            margin-top: 7px;
+            margin-left: 20px;
+            font-size: var(--font_16);
+        }
+    }
+    .section_navigation {
+        align-self: flex-end;
+    }
+    .small_videos {
+        @include flex_mixins.center_j_d(space-around);
+
+        flex-wrap: wrap;
+    }
+    .small_video {
+        width: clamp(230px, 50%, 320px);
+
+        &_wallpaper {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    }
+    .video_inf {
+        &_name {
+            display: flex;
+            flex-direction: column;
+            font-size: var(--font_16);
+            font-weight: bold;
+        }
+        &_crucial_data {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            &_views {
+                padding-top: 2px;
+                height: 16px;
+                font-size: 13px;
+                color: rgb(194, 194, 194);
+            }
+            &_author {
+                font-size: 13px;
+                color: rgb(194, 194, 194);
+            }
+        }
+    }
+    .big_videos {
+        @include flex_mixins.center_j_d(space-around);
+
+        flex-wrap: wrap;
+    }
+    .big_video {
+        width: clamp(430px, 40%, 620px);
+
+        &_wallpaper {
+            width: 100%;
+            // margin-top: 2px;
+        }
+    }
+    .other_options {
+        align-self: flex-end;
+        @include flex_mixins.center_j_d(space-between);
+        width: 17.2%;
+        min-width: 240px;
+    }
+    .other_subscribe_button {
+        background-color: red;
+        color: white;
+        text-align: center;
+        font-size: var(--font_16);
+        border-radius: 20px;
+        width: clamp(154px, 50%, 230px);
+    }
+}

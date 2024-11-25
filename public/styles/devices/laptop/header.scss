@@ -1,0 +1,52 @@
+@use '../../shared/mixins/flex' as flex_mixins;
+@use '../../shared/extends/flex';
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    header {
+        padding: 10px 16px 10px 16px;
+        @include flex_mixins.center_j_d(space-between);
+    }
+    #header_firstPart {
+        width: 14%;
+        min-width: 160px;
+        @include flex_mixins.center_j_d(space-between);
+
+        &_menu {
+        }
+        &_appLogo {
+        }
+    }
+    #header_secondPart {
+        width: 80%;
+        @include flex_mixins.center_j_d(space-between);
+        &_wrapper {
+            &_otherLogos {
+                display: none;
+                img {
+                }
+            }
+            &_userIcon {
+            }
+        }
+    }
+    #search_container {
+        position: relative;
+        width: 90%;
+        @include flex_mixins.center_j_d(initial);
+
+        &_field {
+            width: inherit;
+            height: inherit;
+            padding: 12px 0 12px 23px;
+            font-size: var(--font_16);
+            border-radius: 22px;
+            background: rgb(235, 235, 235);
+            opacity: 0.3;
+        }
+        &_logo {
+            position: absolute;
+            right: 13%;
+            width: 18.21px;
+        }
+    }
+}

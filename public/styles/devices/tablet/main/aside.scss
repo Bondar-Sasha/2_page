@@ -1,0 +1,28 @@
+@use '../../../shared/mixins/flex' as flex_mixins;
+@use '../../../shared/extends/flex';
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    aside {
+        display: none;
+    }
+    #aside_links {
+        &_major {
+            &_settingsLogoContainer {
+            }
+        }
+        &_other {
+        }
+    }
+    .aside_styled_link {
+    }
+    #aside_subscriptions {
+        &_label {
+        }
+        &_container {
+        }
+    }
+    .aside_sub {
+    }
+    #aside_otherLinks {
+    }
+}

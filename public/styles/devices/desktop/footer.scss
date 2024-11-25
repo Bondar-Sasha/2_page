@@ -1,0 +1,10 @@
+@use '../../shared/mixins/flex' as flex_mixins;
+@use '../../shared/extends/flex';
+
+@media screen and (min-width: 1440px) {
+    footer {
+    }
+    #footer_icons {
+        display: none;
+    }
+}

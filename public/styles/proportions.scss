@@ -1,0 +1,102 @@
+header {
+}
+#header_firstPart {
+    &_menu {
+        aspect-ratio: 20 / 17;
+    }
+    &_appLogo {
+        aspect-ratio: 116 / 25;
+    }
+}
+#header_secondPart {
+    &_wrapper {
+        &_otherLogos {
+            aspect-ratio: 175 / 32;
+        }
+        &_userIcon {
+            aspect-ratio: 1 / 1;
+        }
+    }
+}
+#search_container {
+    &_field {
+        aspect-ratio: 830 / 44;
+    }
+    &_logo {
+        aspect-ratio: 1 / 1;
+    }
+}
+aside {
+}
+#aside_links {
+    &_major {
+        &_settingsLogoContainer {
+        }
+    }
+    &_other {
+    }
+}
+.aside_styled_link {
+}
+#aside_subscriptions {
+    &_label {
+    }
+    &_container {
+    }
+}
+.aside_sub {
+}
+#aside_otherLinks {
+}
+#main_content {
+    &_authorContent {
+    }
+    &_recommended {
+    }
+    &_other {
+    }
+}
+.section_infHeader {
+}
+.section_inf {
+    &_authorLogo {
+    }
+    &_authorName {
+    }
+}
+.section_navigation {
+    aspect-ratio: 66 / 28;
+}
+.small_videos {
+}
+.small_video {
+    aspect-ratio: 250 / 200;
+
+    &_wallpaper {
+    }
+}
+.video_inf {
+    &_name {
+    }
+    &_crucial_data {
+        &_views {
+        }
+        &_author {
+        }
+    }
+}
+.big_videos {
+}
+.big_video {
+    aspect-ratio: 540 / 300;
+
+    &_wallpaper {
+    }
+}
+.other_subscribe_button {
+    aspect-ratio: 154 / 40;
+}
+footer {
+}
+#footer_icons {
+}

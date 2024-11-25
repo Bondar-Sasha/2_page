@@ -1,0 +1,19 @@
+@use '../shared/mixins/flex' as flex_mixins;
+
+// #search_container {
+//     position: relative;
+//     @include flex_mixins.center_j_d(initial);
+
+//     &_field {
+//         width: inherit;
+//         height: inherit;
+//         padding: 12px 0 12px 23px;
+//         font-size: var(--font_16);
+//         border-radius: 22px;
+//         background: rgb(235, 235, 235);
+//         opacity: 0.3;
+//     }
+//     &_logo {
+//         position: absolute;
+//     }
+// }

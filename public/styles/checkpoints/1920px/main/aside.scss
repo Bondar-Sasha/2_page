@@ -1,0 +1,70 @@
+@use '../../../shared/mixins/flex' as flex_mixins;
+@use '../../../shared/extends/flex';
+
+@media screen and (width: 1920px) {
+    aside {
+        // width: 224px;
+        @include flex_mixins.center_j_d(initial, column);
+        align-items: initial;
+    }
+    #aside_links {
+        @include flex_mixins.center_j_d(space-between, column);
+        align-items: initial;
+        width: 134px;
+        height: 540px;
+        &_major {
+            @include flex_mixins.center_j_d(space-between, column);
+            align-items: initial;
+            height: 117px;
+
+            &_settingsLogoContainer {
+                color: red;
+            }
+        }
+        &_other {
+            @include flex_mixins.center_j_d(space-between, column);
+            align-items: initial;
+            height: 363px;
+        }
+    }
+    .aside_styled_link {
+        @include flex_mixins.center_j_d(initial);
+        color: rgb(137, 137, 137);
+        font-size: var(--font_16);
+
+        img {
+            margin-right: 15px;
+        }
+    }
+    #aside_subscriptions {
+        @include flex_mixins.center_j_d(space-between, column);
+        align-items: initial;
+        margin-top: 54px;
+        width: 159px;
+        height: 324px;
+        &_label {
+            font-size: var(--font_18);
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+        }
+        &_container {
+            height: 271px;
+            @include flex_mixins.center_j_d(space-between, column);
+            align-items: initial;
+        }
+    }
+    .aside_sub {
+        @include flex_mixins.center_j_d(initial);
+        color: rgb(137, 137, 137);
+
+        font-size: var(--font_16);
+        img {
+            margin-right: 10px;
+        }
+    }
+    #aside_otherLinks {
+        margin-top: 104px;
+        width: 84px;
+        height: 20px;
+    }
+}
