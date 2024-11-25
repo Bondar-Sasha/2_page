@@ -8,72 +8,74 @@
         align-items: initial;
     }
     #main_content {
-        // display: flex;
-        // flex-direction: column;
-
-        margin-left: 66px;
-        &_authorContent {
-            display: flex;
-            flex-direction: column;
-        }
-        &_recommended {
-            display: flex;
-            flex-direction: column;
-            margin-top: 48px;
-        }
-        &_other {
-            display: flex;
-            flex-direction: column;
-            margin-top: 50px;
-        }
-    }
-    .section_infHeader {
-        width: 1515px;
-        margin-bottom: 28px;
-        color: rgb(25, 32, 44);
-
-        font-size: var(--font_26);
-        font-weight: 700;
-        @include flex_mixins.center_j_d(space-between);
-    }
-    .section_inf {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        // width: 50px;
-        &_authorLogo {
+        flex-direction: column;
+        &_authorHeader {
+            &_img {
+            }
+            &_presentation {
+                &_logo {
+                }
+                &_other {
+                    &_name {
+                    }
+                    &_subs {
+                    }
+                }
+                &_buttons {
+                    &_notification {
+                    }
+                    &_subscribe {
+                    }
+                }
+            }
         }
-        &_authorName {
-            margin-left: 20px;
-            font-size: 26px;
-            font-weight: bold;
+        &_centralPart {
+            &_sections {
+            }
+            &_bigVideo {
+                &_description {
+                    &_name {
+                    }
+                    &_content {
+                    }
+                    &_other {
+                    }
+                }
+            }
         }
-        &_author_infForUser {
-            color: rgb(194, 194, 194);
-            margin-top: 7px;
-            margin-left: 20px;
-            font-size: var(--font_16);
+        &_smallVideos {
+            @include flex_mixins.center_j_d(space-between, column);
+            align-items: initial;
+            flex-wrap: initial;
+            &_header {
+                // width:;
+                @include flex_mixins.center_j_d(space-between);
+            }
+            &_container {
+                display: flex;
+                align-items: center;
+            }
         }
     }
-    .section_navigation {
-        align-self: flex-end;
-    }
-    .small_videos {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: initial;
-    }
+
     .small_video {
         width: 250px;
+        position: relative;
+        &_time {
+            position: absolute;
+            bottom: 59px;
+            right: 10px;
+        }
 
         &_wallpaper {
-            margin-bottom: 8px;
+            margin-bottom: 9px;
         }
         &:not(:nth-child(1)) {
             margin-left: 40px;
         }
     }
+
     .video_inf {
         &_name {
             display: flex;
@@ -97,30 +99,14 @@
             }
         }
     }
-    .big_videos {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: initial;
-    }
-    .big_video {
-        width: 540px;
-        &_wallpaper {
-            // margin-top: 2px;
-        }
-    }
-    .other_options {
-        align-self: flex-end;
-        @include flex_mixins.center_j_d(space-between);
-        width: 17.2%;
-        min-width: 240px;
-    }
-    .other_subscribe_button {
-        background-color: red;
-        color: white;
-        text-align: center;
-        font-size: var(--font_16);
-        border-radius: 20px;
-        width: 154px;
-        height: 40px;
-    }
+
+    // .other_subscribe_button {
+    //     background-color: red;
+    //     color: white;
+    //     text-align: center;
+    //     font-size: var(--font_16);
+    //     border-radius: 20px;
+    //     width: 154px;
+    //     height: 40px;
+    // }
 }

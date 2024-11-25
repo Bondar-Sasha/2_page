@@ -3,74 +3,181 @@
 
 @media screen and (min-width: 1440px) {
     main {
-        @include flex_mixins.center_j_d(initial);
-        padding: 25px 0 0 30px;
-        align-items: initial;
+        display: flex;
+        padding: 10px 0 0 30px;
     }
     #main_content {
-        // display: flex;
-        // flex-direction: column;
-        flex-grow: 1;
-        margin-left: 66px;
-        &_authorContent {
-            display: flex;
-            flex-direction: column;
-        }
-        &_recommended {
-            display: flex;
-            flex-direction: column;
-            margin-top: 47px;
-        }
-        &_other {
-            display: flex;
-            flex-direction: column;
-            margin-top: 50px;
-        }
-    }
-    .section_infHeader {
-        width: 90%;
-        margin-bottom: 30px;
-        color: rgb(25, 32, 44);
-
-        font-size: var(--font_26);
-        font-weight: 700;
-        @include flex_mixins.center_j_d(space-between);
-    }
-    .section_inf {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        // width: 50px;
-        &_authorLogo {
-        }
-        &_authorName {
-            margin-left: 20px;
-            font-size: 26px;
-            font-weight: bold;
-        }
-        &_author_infForUser {
-            color: rgb(194, 194, 194);
-            margin-top: 7px;
-            margin-left: 20px;
-            font-size: var(--font_16);
-        }
-    }
-    .section_navigation {
-        align-self: flex-end;
-    }
-    .small_videos {
-        @include flex_mixins.center_j_d(space-around);
+        flex-direction: column;
+        margin-left: 35px;
+        &_authorHeader {
+            height: 393px;
+            // margin-top: 30px;
+            width: 95%;
 
-        flex-wrap: wrap;
+            @include flex_mixins.center_j_d(space-between, column);
+            align-items: initial;
+
+            &_img {
+                // width: 100%;
+            }
+            &_presentation {
+                @include flex_mixins.center_j_d(space-between);
+                &_major {
+                    width: 19%;
+                    @include flex_mixins.center_j_d(space-between);
+
+                    &_logo {
+                    }
+                    &_other {
+                        @include flex_mixins.center_j_d(space-between, column);
+                        align-items: initial;
+                        &_name {
+                            color: rgb(25, 32, 44);
+                            font-size: clamp(20px, 3vw, 27px);
+                            font-weight: 700;
+                        }
+                        &_subs {
+                            color: rgb(194, 194, 194);
+                            font-size: clamp(13px, 1vw, 15px);
+                            font-weight: 400;
+                        }
+                    }
+                }
+                &_buttons {
+                    @include flex_mixins.center_j_d(space-between);
+                    width: 12%;
+
+                    &_notification {
+                    }
+                    &_subscribe {
+                        width: clamp(150px, 5vw, 170px);
+                        color: white;
+                        border-radius: clamp(20px, 5vw, 23px);
+                        background: rgb(255, 0, 0);
+                        text-align: center;
+                        aspect-ratio: 154 / 40;
+                    }
+                }
+            }
+        }
+        &_centralPart {
+            display: grid;
+
+            grid-template-columns: auto 20%;
+            &_sections {
+                grid-column: 1;
+                grid-row: 1;
+                height: 102px;
+                @include flex_mixins.center_j_d(space-between);
+                width: 45%;
+                & > :first-child {
+                    border-bottom: 2px solid red;
+                    span {
+                        color: red;
+                    }
+                }
+                span {
+                    color: rgb(0, 0, 0);
+                    font-size: clamp(17px, 3vw, 19px);
+                    font-weight: 400;
+                }
+            }
+            &_bigVideo {
+                grid-column: 1;
+                grid-row: 2;
+                width: 93%;
+                height: clamp(250px, 7vw, 270px);
+                @include flex_mixins.center_j_d(space-between);
+                img {
+                    width: clamp(500px, 3vw, 510px);
+                    aspect-ratio: 540 /250;
+                }
+                &_description {
+                    width: 58%;
+
+                    &_name {
+                        color: rgb(25, 32, 44);
+                        font-size: clamp(24px, 4vw, 26px);
+                        font-weight: 700;
+                    }
+                    &_content {
+                        color: rgb(0, 0, 0);
+                        font-size: clamp(14px, 4vw, 16px);
+                        margin-top: 10px;
+                        font-weight: 400;
+                    }
+                    &_other {
+                        color: rgb(194, 194, 194);
+                        font-size: clamp(14px, 4vw, 16px);
+                        font-weight: 400;
+                        margin-top: 30px;
+                    }
+                }
+            }
+            &_recommendedChannel {
+                grid-column: 2;
+                grid-row: span 2;
+                width: 30%;
+                @include flex_mixins.center_j_d(space-between, column);
+                align-items: initial;
+                height: clamp(250px, 4vw, 270px);
+                span {
+                    color: rgb(194, 194, 194);
+                    font-size: 16px;
+                    white-space: nowrap;
+                    font-weight: 400;
+                }
+            }
+        }
+        .recommendedChannel_container {
+            width: clamp(180px, 3vw, 190px);
+            @include flex_mixins.center_j_d(space-between);
+            span {
+                color: rgb(25, 32, 44);
+                font-size: clamp(16px, 3vw, 18px);
+                font-weight: 700;
+            }
+        }
+        &_smallVideos {
+            @include flex_mixins.center_j_d(space-between, column);
+            align-items: initial;
+            margin-top: 61px;
+            flex-wrap: initial;
+            height: 270px;
+            &_header {
+                width: 90%;
+                span {
+                    color: rgb(25, 32, 44);
+                    font-size: clamp(23px, 3vw, 26px);
+                    font-weight: 700;
+                }
+                @include flex_mixins.center_j_d(space-between);
+            }
+            &_container {
+                display: flex;
+                align-items: center;
+            }
+        }
     }
+
     .small_video {
-        width: clamp(210px, 50%, 310px);
+        width: 250px;
+        position: relative;
+        &_time {
+            position: absolute;
+            bottom: 59px;
+            right: 10px;
+        }
 
         &_wallpaper {
-            width: 100%;
-            margin-bottom: 8px;
+            margin-bottom: 9px;
+        }
+        &:not(:nth-child(1)) {
+            margin-left: 40px;
         }
     }
+
     .video_inf {
         &_name {
             display: flex;
@@ -93,32 +200,5 @@
                 color: rgb(194, 194, 194);
             }
         }
-    }
-    .big_videos {
-        @include flex_mixins.center_j_d(space-around);
-
-        flex-wrap: wrap;
-    }
-    .big_video {
-        width: clamp(410px, 50%, 520px);
-
-        &_wallpaper {
-            width: 100%;
-            // margin-top: 2px;
-        }
-    }
-    .other_options {
-        align-self: flex-end;
-        @include flex_mixins.center_j_d(space-between);
-        width: 17.2%;
-        min-width: 240px;
-    }
-    .other_subscribe_button {
-        background-color: red;
-        color: white;
-        text-align: center;
-        font-size: var(--font_16);
-        border-radius: 20px;
-        width: clamp(154px, 50%, 230px);
     }
 }
