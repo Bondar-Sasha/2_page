@@ -10,7 +10,12 @@
         width: 21%;
         max-width: 180px;
         @include flex_mixins.center_j_d(space-between);
-
+        &_simpleLogo {
+            display: none;
+        }
+        &_author {
+            display: none;
+        }
         &_menu {
         }
         &_appLogo {
@@ -25,6 +30,9 @@
                 }
             }
             &_userIcon {
+            }
+            &_dotMenu {
+                display: none;
             }
         }
     }

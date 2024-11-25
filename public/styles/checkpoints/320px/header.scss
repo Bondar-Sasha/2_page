@@ -3,15 +3,25 @@
 
 @media screen and (width: 320px) {
     header {
-        padding: 10px 16px 10px 16px;
+        padding: 12px 17.5px 10px 16px;
         @include flex_mixins.center_j_d(space-between);
     }
     #header_firstPart {
+        width: 173px;
+        @include flex_mixins.center_j_d(space-between);
         &_menu {
             display: none;
         }
+        &_simpleLogo {
+        }
+        &_author {
+            color: rgb(25, 32, 44);
+            font-size: var(--font_16);
+            font-weight: 700;
+        }
         &_appLogo {
-            width: 116px;
+            // width: 116px;
+            display: none;
         }
     }
     #header_secondPart {
@@ -25,8 +35,11 @@
                 }
             }
             &_userIcon {
-                width: 30px;
+                display: none;
             }
+            // &_dotMenu {
+            //     margin-top: 3px;
+            // }
         }
     }
     #search_container {

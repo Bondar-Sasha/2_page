@@ -11,6 +11,12 @@
         &_menu {
             width: 20px;
         }
+        &_simpleLogo {
+            display: none;
+        }
+        &_author {
+            display: none;
+        }
         &_appLogo {
             width: 116px;
         }
@@ -21,14 +27,26 @@
         &_wrapper {
             width: 260px;
             @include flex_mixins.center_j_d(space-between);
+
             &_otherLogos {
                 width: 170px;
                 @include flex_mixins.center_j_d(space-between);
-                img {
+                &_notificationContainer {
+                    position: relative;
+                    // &_logo {
+                    // }
+                    &_icon {
+                        top: -5px;
+                        left: 8px;
+                        position: absolute;
+                    }
                 }
             }
             &_userIcon {
                 width: 40px;
+            }
+            &_dotMenu {
+                display: none;
             }
         }
     }

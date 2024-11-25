@@ -3,73 +3,81 @@
 
 @media screen and (max-width: 767px) {
     header {
-        padding: 10px 16px 10px 16px;
+        padding: 12px 17.5px 10px 16px;
         @include flex_mixins.center_j_d(space-between);
     }
     #header_firstPart {
-        @include flex_mixins.center_j_d(center);
-
+        width: clamp(170px, 40vw, 210px);
+        @include flex_mixins.center_j_d(space-between);
         &_menu {
             display: none;
         }
+        &_simpleLogo {
+        }
+        &_author {
+            color: rgb(25, 32, 44);
+            font-size: clamp(14px, 3vw, 18px);
+            font-weight: 700;
+        }
         &_appLogo {
-            width: clamp(100px, 20vw, 140px);
+            // width: 116px;
+            display: none;
         }
     }
     #header_secondPart {
-        width: clamp(60px, 30vw, 150px);
+        // width: 73px;
+        width: clamp(45px, 10vw, 100px);
+
         @include flex_mixins.center_j_d(space-between);
         &_wrapper {
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
             &_otherLogos {
                 display: none;
+
                 img {
                 }
             }
             &_userIcon {
-                width: clamp(15px, 15vw, 50px);
+                display: none;
+            }
+            &_dotMenu {
+                // font-size: clamp(13px, 3vw, 18px);
             }
         }
     }
     #search_container {
-        @include flex_mixins.center_j_d(center);
-
         &_field {
             display: none;
         }
         &_logo {
-            width: clamp(10px, 8vw, 20px);
+            width: 19px;
         }
     }
 }
-@media screen and (max-width: 200px) {
-    header {
-    }
-    #header_firstPart {
-        width: 100%;
-        @include flex_mixins.center_j_d(space-between);
-
-        &_menu {
-            display: initial;
-        }
-        &_appLogo {
-        }
-    }
+@media screen and (max-width: 260px) {
     #header_secondPart {
-        display: none;
-
-        &_wrapper {
-            &_otherLogos {
-                img {
-                }
-            }
-            &_userIcon {
-            }
-        }
+        justify-content: center;
     }
     #search_container {
+        display: none;
         &_field {
         }
         &_logo {
+            width: 19px;
+        }
+    }
+}
+@media screen and (max-width: 230px) {
+    header {
+        justify-content: space-around;
+    }
+
+    #header_firstPart {
+        width: fit-content;
+        &_author {
+            display: none;
         }
     }
 }
