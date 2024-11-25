@@ -10,7 +10,12 @@
         width: 14%;
         min-width: 160px;
         @include flex_mixins.center_j_d(space-between);
-
+        &_simpleLogo {
+            display: none;
+        }
+        &_author {
+            display: none;
+        }
         &_menu {
         }
         &_appLogo {
@@ -22,10 +27,21 @@
         &_wrapper {
             &_otherLogos {
                 display: none;
-                img {
+                &_notificationContainer {
+                    position: relative;
+                    // &_logo {
+                    // }
+                    &_icon {
+                        top: -5px;
+                        left: 8px;
+                        position: absolute;
+                    }
                 }
             }
             &_userIcon {
+            }
+            &_dotMenu {
+                display: none;
             }
         }
     }
